@@ -1,0 +1,17 @@
+{
+  "name": "docker_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ilyas",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "dotenv": "^16.0.3",
+    "pg": "^8.8.0",
+    "redis": "^4.5.1"
+  }
+}

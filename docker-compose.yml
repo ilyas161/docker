@@ -1,0 +1,33 @@
+---
+version: '3.9'
+
+services:
+  redis: 
+    image: redis
+    ports: 
+      - ${redis_port}
+    volumes:
+      - ${redis_volumes}
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - ${postgres_port}
+    environment:
+      POSTGRES_USER:
+        ${postgres_user}
+      POSTGRES_PASSWORD:
+        ${postgres_pwd}
+      POSTGRES_DB:
+        ${postgres_db}
+  amqp:
+    image: rabbitmq
+    ports:
+      - ${amqp_port}
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER:
+        ${amqp_user}
+      RABBITMQ_DEFAULT_PASS:
+        ${amqp_pwd}
+    
